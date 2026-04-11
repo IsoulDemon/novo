@@ -146,6 +146,14 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 
 /* RODAPÉ */
 .rodape{background:#111;color:rgba(255,255,255,.4);text-align:center;padding:20px;font-size:12px}
+.dep-carousel{overflow:hidden;position:relative;width:100%}
+.dep-track{display:flex;transition:transform .35s ease}
+.dep-slide{min-width:100%;box-sizing:border-box;padding:0 4px}
+.dep-slide img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.10)}
+.dep-dots{display:flex;justify-content:center;gap:10px;margin-top:18px}
+.dep-dot{width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;border:none;transition:background .2s;padding:0}
+.dep-dot.active{background:var(--g7)}
+@media(min-width:600px){.dep-track{flex-wrap:wrap;transform:none!important}.dep-slide{min-width:calc(50% - 4px);flex:1}.dep-dots{display:none}}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -213,14 +221,20 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
   <div class="stag" style="text-align:center">Resultados reais</div>
   <h2 style="text-align:center;max-width:640px;margin:0 auto 10px">Mais de 2.847 pessoas já transformaram sua casa em um pomar</h2>
   <p style="text-align:center;max-width:520px;margin:0 auto 36px;font-size:16px;color:var(--mut)">Veja o que nossos alunos estão dizendo sobre os resultados</p>
-  <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
-    <div style="flex:1;min-width:280px;max-width:400px;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.10)">
-      <img src="https://github.com/IsoulDemon/novo/blob/main/print-Roberta.png?raw=true" alt="Depoimento Roberta" style="width:100%;height:auto;display:block">
+<div class="dep-carousel">
+  <div class="dep-track" id="depTrack">
+    <div class="dep-slide">
+      <img src="https://github.com/IsoulDemon/novo/blob/main/print-Roberta.png?raw=true" alt="Depoimento Roberta">
     </div>
-    <div style="flex:1;min-width:280px;max-width:400px;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.10)">
-      <img src="https://github.com/IsoulDemon/novo/blob/main/print-sheyla.png?raw=true" alt="Depoimento Sheyla" style="width:100%;height:auto;display:block">
+    <div class="dep-slide">
+      <img src="https://github.com/IsoulDemon/novo/blob/main/print-sheyla.png?raw=true" alt="Depoimento Sheyla">
     </div>
   </div>
+  <div class="dep-dots">
+    <span class="dep-dot active" onclick="depGo(0)"></span>
+    <span class="dep-dot" onclick="depGo(1)"></span>
+  </div>
+</div>
 </div>
 
 <div class="div-line"></div>
@@ -340,6 +354,23 @@ function ativarSom(){
   setTimeout(function(){btn.style.opacity='0';},1600);
   setTimeout(function(){btn.style.display='none';},2100);
 }
+</script>
+<script>
+var depIdx=0;
+function depGo(n){
+  depIdx=n;
+  document.getElementById('depTrack').style.transform='translateX(-'+(n*100)+'%)';
+  document.querySelectorAll('.dep-dot').forEach(function(d,i){d.classList.toggle('active',i===n);});
+}
+(function(){
+  var el=document.getElementById('depTrack'),sx=0;
+  el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  el.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    if(dx<-40&&depIdx<1)depGo(1);
+    if(dx>40&&depIdx>0)depGo(0);
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
