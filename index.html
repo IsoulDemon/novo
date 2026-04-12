@@ -45,6 +45,7 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 .btn{display:inline-block;background:var(--g9);color:#fff;font-family:'Oswald',sans-serif;font-size:21px;font-weight:700;letter-spacing:.5px;padding:20px 52px;border-radius:7px;border:none;cursor:pointer;text-decoration:none;animation:pulsar 2.2s ease-in-out infinite}
 .btn-branco{display:inline-block;background:#fff;color:var(--g7);font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;padding:18px 52px;border-radius:7px;border:none;cursor:pointer;text-decoration:none;animation:pulsar 2.2s ease-in-out infinite}
 @keyframes pulsar{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes bounce-arrow{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 .btn:hover{background:var(--g7)}.btn-branco:hover{background:#f0f0f0}
 .btn-note{font-size:13px;opacity:.6;margin-top:12px}
 
@@ -222,6 +223,11 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
   <div class="badge">Mais de 2.847 alunos já colheram em casa</div>
   <h1>Pare de gastar mais de <em>250 reais</em> todo mês com frutas e verduras no mercado. Por apenas <em>10 reais</em>, você aprende a plantar e colher seus próprios alimentos frescos todos os dias, para sempre.</h1>
   <p class="sub">Acorde amanhã sabendo que tem frutas crescendo na sua janela. Sem quintal. Sem experiência. Começa hoje.</p>
+  <div style="margin-top:28px;animation:bounce-arrow 1.2s ease-in-out infinite">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6v20M18 26l-8-8M18 26l8-8" stroke="rgba(255,255,255,0.75)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 </div>
 
 <!-- PHONE MOCKUP + VSL -->
