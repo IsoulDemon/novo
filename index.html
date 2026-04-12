@@ -170,6 +170,19 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 .on-check-gold{background:var(--am);color:var(--mr);font-size:14px}
 .on-timer-bloco{background:var(--g1);border:2px solid var(--g3);border-radius:14px;padding:18px;text-align:center;margin-bottom:22px}
 .on-trust{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut);font-weight:700;margin-bottom:20px;padding:12px;background:#f9f9f9;border-radius:8px}
+/* AUTOR */
+.autor-sec{padding-top:48px;padding-bottom:48px}
+.autor-card{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
+.autor-foto-col{display:flex;flex-direction:column;align-items:center;gap:14px;flex-shrink:0}
+.autor-foto{width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:top;border:4px solid var(--g3);box-shadow:0 6px 24px rgba(0,0,0,0.12)}
+.autor-ig{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;padding:8px 16px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;transition:opacity .2s}
+.autor-ig:hover{opacity:.85}
+.autor-texto{flex:1;min-width:240px}
+.autor-texto p{font-size:16px;color:var(--mut);line-height:1.75;margin-bottom:14px}
+.autor-texto p:last-child{margin-bottom:0}
+@media(max-width:520px){.autor-card{flex-direction:column;align-items:center}.autor-texto{text-align:left}}
+/* TIMER MOBILE FIX */
+@media(max-width:480px){.timer{gap:6px}.tn{font-size:26px;min-width:52px;padding:8px 10px}.tsep{font-size:24px}}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -255,6 +268,29 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 
 <div class="div-line"></div>
 
+
+<!-- AUTOR -->
+<div class="div-line"></div>
+<div class="sec autor-sec">
+  <div class="stag" style="text-align:center">Quem criou o método</div>
+  <h2 style="text-align:center;margin-bottom:28px">Conheça Valéria Matos</h2>
+  <div class="autor-card">
+    <div class="autor-foto-col">
+      <img src="https://github.com/IsoulDemon/imgs-flores/blob/main/download%20(6).jpeg?raw=true" alt="Valéria Matos" class="autor-foto">
+      <a href="https://www.instagram.com/matosvaleriaa/" target="_blank" class="autor-ig">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @matosvaleriaa
+      </a>
+    </div>
+    <div class="autor-texto">
+      <p>Valéria Matos é casada há 11 anos, mãe de dois filhos — Enzo, de 8, e Isabela, de 5 — e mora num apartamento de 60m² em São Paulo. Como a maioria das famílias brasileiras, ela sentia o peso da inflação nas compras do mês: uma simples bandeja de morango, alguns limões e um maço de tomate já comprometiam boa parte do orçamento.</p>
+      <p>Tudo mudou quando, em 2021, ela decidiu colocar um vasinho de tomate cereja na janela da cozinha. "Comecei por curiosidade e acabei me apaixonando. Em três semanas eu já estava colhendo." Sem quintal, sem estufa, sem experiência — só um vaso, terra e vontade de mudar.</p>
+      <p>Ao longo dos anos seguintes, Valéria foi refinando um método simples, testado na própria varanda, e começou a compartilhar com amigas e vizinhos que viviam a mesma situação. Os resultados foram tão expressivos que ela decidiu transformar tudo em um guia estruturado — o <strong>Sistema Colheita no Vaso</strong>.</p>
+      <p style="color:var(--g9);font-weight:700">"Qualquer pessoa que tenha uma janela com luz pode fazer isso. Eu provei na minha própria casa — e mais de 2.847 famílias já provaram também."</p>
+    </div>
+  </div>
+</div>
+
 <!-- OFERTA -->
 <div class="sec" id="oferta" style="padding-top:48px;padding-bottom:48px">
   <div class="stag" style="text-align:center">Oferta especial de lançamento</div>
@@ -267,7 +303,7 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
       <div class="on-badge-topo">🔥 ACESSO COMPLETO — OFERTA DE LANÇAMENTO</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px">
         <div>
-          <p style="font-size:13px;color:rgba(255,255,255,0.6);text-decoration:line-through;margin:0">De R$ 97,00</p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.6);text-decoration:line-through;margin:0">De R$ 47,00</p>
           <div class="on-preco-big"><sup>R$</sup>10</div>
           <p style="font-size:13px;color:rgba(255,255,255,0.75);margin:0">pagamento único · acesso vitalício</p>
         </div>
