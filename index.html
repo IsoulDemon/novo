@@ -183,6 +183,25 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 @media(max-width:520px){.autor-card{flex-direction:column;align-items:center}.autor-texto{text-align:left}}
 /* TIMER MOBILE FIX */
 @media(max-width:480px){.timer{gap:6px}.tn{font-size:26px;min-width:52px;padding:8px 10px}.tsep{font-size:24px}}
+.phone-wrap{background:linear-gradient(180deg,#0b2d1a 0%,var(--g9) 100%);padding:48px 20px 52px;text-align:center}
+.phone-frame{max-width:270px;margin:0 auto;background:#111;border-radius:44px;padding:12px 10px;box-shadow:0 0 0 2px #333,0 0 0 5px #1a1a1a,0 30px 70px rgba(0,0,0,0.5);display:inline-block;position:relative}
+.phone-notch{width:80px;height:20px;background:#111;border-radius:0 0 14px 14px;margin:0 auto 6px}
+.phone-screen{border-radius:28px;overflow:hidden;position:relative;background:#000;height:480px;max-height:62vh}
+.phone-screen iframe{width:100%;height:100%;display:block;border:none}
+.vsl-bullets{list-style:none;max-width:340px;margin:28px auto 24px;text-align:left}
+.vsl-bullets li{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.92);font-size:15px;font-weight:700;padding:7px 0}
+.prob-sec{background:#fff}
+.prob-grid{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.prob-item{display:flex;align-items:center;gap:14px;background:#fff5f5;border:1.5px solid #f5c6c6;border-radius:10px;padding:14px 18px;font-size:15px;color:#333;font-weight:500}
+.prob-x{min-width:28px;height:28px;background:#e74c3c;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:900;flex-shrink:0}
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:24px 0;max-width:860px;margin-left:auto;margin-right:auto}
+.bonus-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.08);text-align:center;border:1.5px solid #e8f5ec}
+.bonus-card-icon{background:linear-gradient(135deg,var(--g9),var(--g5));padding:22px;font-size:38px}
+.bonus-card-body{padding:16px 14px}
+.bonus-card-body h5{font-size:15px;font-weight:800;color:var(--g9);margin-bottom:6px}
+.bonus-card-body p{font-size:13px;color:var(--mut);line-height:1.5;margin:0}
+.social-num{background:var(--g9);color:#fff;text-align:center;padding:22px 28px;font-size:16px;font-weight:700;letter-spacing:.3px}
+@media(max-width:480px){.phone-screen{height:400px;max-height:58vh}.phone-frame{max-width:240px}}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -193,33 +212,60 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 </script>
 </head>
 <body>
-
 <div class="pg">
 
 <!-- ALERTA TOPO -->
-<div class="alerta" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">⚠️ OFERTA EXPIRA EM: <span style="font-family:'Oswald',sans-serif;font-size:17px;letter-spacing:1px;background:rgba(0,0,0,0.25);padding:2px 10px;border-radius:4px"><span id="hh2">07</span>:<span id="mm2">38</span>:<span id="ss2">51</span></span> — após isso o preço sobe para <strong>R$47</strong></div>
+<div class="alerta" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">⚠️ OFERTA EXPIRA EM: <span style="font-family:Oswald,sans-serif;font-size:17px;letter-spacing:1px;background:rgba(0,0,0,0.25);padding:2px 10px;border-radius:4px"><span id="hh2">07</span>:<span id="mm2">38</span>:<span id="ss2">51</span></span> — após isso o preço sobe para <strong>R$47</strong></div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="badge">Mais de 2.847 alunos já colheram em casa</div>
   <h1>Pare de gastar mais de <em>250 reais</em> todo mês com frutas e verduras no mercado. Por apenas <em>10 reais</em>, você aprende a plantar e colher seus próprios alimentos frescos todos os dias, para sempre.</h1>
-<p class="sub">Acorde amanhã sabendo que tem frutas crescendo na sua janela. Sem quintal. Sem experiência. Começa hoje.</p>
+  <p class="sub">Acorde amanhã sabendo que tem frutas crescendo na sua janela. Sem quintal. Sem experiência. Começa hoje.</p>
 </div>
 
-<div style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative"><iframe id="yt-iframe" width="100%" height="100%" src="https://www.youtube.com/embed/zedD94XBdy0?autoplay=1&mute=1&loop=1&playlist=zedD94XBdy0&rel=0&modestbranding=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block"></iframe><div id="som-btn" onclick="ativarSom()" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.72);color:#fff;padding:11px 22px;border-radius:50px;cursor:pointer;font-family:Lato,sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;gap:9px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.18);box-shadow:0 4px 20px rgba(0,0,0,.4);transition:opacity .4s,background .3s;white-space:nowrap;user-select:none">🔇 Clique para ativar o som</div></div>
-<div class="banner-cap">Feito num apartamento. Sem quintal. Sem experiência. Só um vaso e o método certo.</div>
+<!-- PHONE MOCKUP + VSL -->
+<div class="phone-wrap">
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <iframe id="yt-iframe" width="100%" height="100%" src="https://www.youtube.com/embed/zedD94XBdy0?autoplay=1&mute=1&loop=1&playlist=zedD94XBdy0&rel=0&modestbranding=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;display:block"></iframe>
+      <div id="som-btn" onclick="ativarSom()" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.72);color:#fff;padding:11px 22px;border-radius:50px;cursor:pointer;font-family:Lato,sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;gap:9px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.18);box-shadow:0 4px 20px rgba(0,0,0,.4);transition:opacity .4s,background .3s;white-space:nowrap;user-select:none">🔇 Clique para ativar o som</div>
+    </div>
+  </div>
+  <ul class="vsl-bullets">
+    <li>✅ Sem quintal — funciona em apartamento</li>
+    <li>✅ Sem experiência prévia necessária</li>
+    <li>✅ Primeiros resultados em semanas</li>
+    <li>✅ Acesso imediato por apenas R$10</li>
+  </ul>
+  <a href="#oferta" class="btn" style="font-size:18px;padding:18px 42px">QUERO COMEÇAR AGORA POR R$10</a>
+  <p class="btn-note" style="color:rgba(255,255,255,0.6);margin-top:10px">✅ Acesso imediato &nbsp;·&nbsp; ✅ Pagamento seguro &nbsp;·&nbsp; ✅ Garantia de 7 dias</p>
+</div>
 
-<!-- CTA APÓS BANNER -->
-<div style="background:var(--g1);color:var(--txt);text-align:center;padding:32px 28px;border-bottom:2px solid var(--g3)">
-  <a href="#oferta" class="btn">QUERO MEU KIT AGORA POR APENAS R$10</a>
-  <p class="btn-note" style="color:var(--mut)">✅ Acesso imediato &nbsp;·&nbsp; ✅ Pagamento 100% seguro &nbsp;·&nbsp; ✅ Funciona em apartamentos</p>
+<!-- O PROBLEMA -->
+<div class="sec prob-sec">
+  <div class="stag">O problema não é você</div>
+  <h2>Ninguém te ensinou do jeito certo</h2>
+  <p style="color:var(--mut);font-size:16px;max-width:560px">Se você já tentou plantar e não conseguiu, não é culpa sua. O sistema convencional empurra informação genérica que não funciona para quem mora em apartamento.</p>
+  <div class="prob-grid">
+    <div class="prob-item"><div class="prob-x">✕</div><span>Você não tem quintal ou espaço grande — e acredita que precisa</span></div>
+    <div class="prob-item"><div class="prob-x">✕</div><span>Você já tentou plantar antes e a planta não sobreviveu</span></div>
+    <div class="prob-item"><div class="prob-x">✕</div><span>Você não sabe quais espécies realmente funcionam em vaso</span></div>
+    <div class="prob-item"><div class="prob-x">✕</div><span>Você acha que é caro ou complicado demais para o seu dia a dia</span></div>
+  </div>
+</div>
+
+<!-- RESPIRA STRIP -->
+<div class="strip" style="padding:36px 28px">
+  <h2>Respira. O problema tem solução.</h2>
+  <p>Com o método certo, qualquer pessoa que tenha uma janela e um vaso pode começar hoje — sem experiência, sem quintal e com menos de R$10.</p>
 </div>
 
 <!-- O QUE VOCÊ RECEBE -->
 <div class="sec">
   <div class="stag">Seu pacote completo</div>
   <h2>Tudo que está incluído quando você entrar hoje</h2>
-
   <div class="recebe">
     <h4>📗 Guia completo Sistema Colheita no Vaso</h4>
     <ul class="rlist">
@@ -231,46 +277,62 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
       <li><div class="ri">✓</div><span><strong>Guia de variedades para vaso</strong> — quais espécies plantar, onde comprar e como escolher as mudas certas para o seu espaço</span></li>
     </ul>
   </div>
-
-  <!-- BÔNUS -->
-  <div class="bonus">
-    <h4>🎁 Mais 3 bônus exclusivos que você leva de graça:</h4>
-    <div class="bgrid">
-      <div class="bc"><div class="blbl">Bônus 1</div><h5>Lista premium de espécies</h5><p>As variedades mais produtivas e fáceis de cultivar em vaso — selecionadas por resultado real.</p></div>
-      <div class="bc"><div class="blbl">Bônus 2</div><h5>Truques de crescimento rápido</h5><p>Como acelerar sua produção naturalmente, sem hormônios ou insumos caros.</p></div>
-      <div class="bc"><div class="blbl">Bônus 3</div><h5>Renda extra com o cultivo</h5><p>Como vender seus excedentes localmente e transformar seu vaso em fonte de renda extra.</p></div>
+  <div style="margin-top:32px">
+    <div class="stag">Bônus exclusivos</div>
+    <h2 style="margin-bottom:8px">Mais 3 bônus que você leva de graça</h2>
+    <p style="color:var(--mut);margin-bottom:0">Incluídos no seu acesso hoje — sem custo adicional.</p>
+  </div>
+  <div class="bonus-grid">
+    <div class="bonus-card">
+      <div class="bonus-card-icon" style="padding:0;line-height:0"><img src="https://github.com/IsoulDemon/novo/blob/main/bonus1-crescimento.png.jpg?raw=true" alt="Bônus 1" style="width:100%;display:block;border-radius:0"></div>
+      <div class="bonus-card-body">
+        <div class="blbl">Bônus 1</div>
+        <h5>Crescimento rápido natural</h5>
+        <p>Como acelerar sua produção sem hormônios ou insumos caros.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-card-icon" style="padding:0;line-height:0"><img src="https://github.com/IsoulDemon/novo/blob/main/bonus2-renda.png.jpg?raw=true" alt="Bônus 2" style="width:100%;display:block;border-radius:0"></div>
+      <div class="bonus-card-body">
+        <div class="blbl">Bônus 2</div>
+        <h5>Renda extra com o cultivo</h5>
+        <p>Como vender seus excedentes e transformar seu vaso em renda extra.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-card-icon" style="padding:0;line-height:0"><img src="https://github.com/IsoulDemon/novo/blob/main/bonus3-cardapio.png.jpg?raw=true" alt="Bônus 3" style="width:100%;display:block;border-radius:0"></div>
+      <div class="bonus-card-body">
+        <div class="blbl">Bônus 3</div>
+        <h5>Cardápio funcional orgânico</h5>
+        <p>Receitas saudáveis com o que você vai plantar — do vaso para a mesa.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="div-line"></div>
+<!-- SOCIAL PROOF STRIP -->
+<div class="social-num">🌱 2.847 famílias brasileiras já estão colhendo em casa. Você vai ficar de fora?</div>
 
 <!-- DEPOIMENTOS -->
 <div class="sec" style="padding-bottom:40px">
   <div class="stag" style="text-align:center">Resultados reais</div>
   <h2 style="text-align:center;max-width:640px;margin:0 auto 10px">Mais de 2.847 pessoas já transformaram sua casa em um pomar</h2>
   <p style="text-align:center;max-width:520px;margin:0 auto 36px;font-size:16px;color:var(--mut)">Veja o que nossos alunos estão dizendo sobre os resultados</p>
-<div class="dep-carousel">
-  <div class="dep-track" id="depTrack">
-    <div class="dep-slide">
-      <img src="https://github.com/IsoulDemon/novo/blob/main/print-Roberta.png?raw=true" alt="Depoimento Roberta">
+  <div class="dep-carousel">
+    <div class="dep-track" id="depTrack">
+      <div class="dep-slide"><img src="https://github.com/IsoulDemon/novo/blob/main/print-Roberta.png?raw=true" alt="Depoimento Roberta"></div>
+      <div class="dep-slide"><img src="https://github.com/IsoulDemon/novo/blob/main/print-sheyla.png?raw=true" alt="Depoimento Sheyla"></div>
     </div>
-    <div class="dep-slide">
-      <img src="https://github.com/IsoulDemon/novo/blob/main/print-sheyla.png?raw=true" alt="Depoimento Sheyla">
+    <div class="dep-dots">
+      <span class="dep-dot active" onclick="depGo(0)"></span>
+      <span class="dep-dot" onclick="depGo(1)"></span>
     </div>
   </div>
-  <div class="dep-dots">
-    <span class="dep-dot active" onclick="depGo(0)"></span>
-    <span class="dep-dot" onclick="depGo(1)"></span>
-  </div>
-</div>
 </div>
 
 <div class="div-line"></div>
-
 
 <!-- AUTOR -->
-<div class="div-line"></div>
 <div class="sec autor-sec">
   <div class="stag" style="text-align:center">Quem criou o método</div>
   <h2 style="text-align:center;margin-bottom:28px">Conheça Valéria Matos</h2>
@@ -284,9 +346,9 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
     </div>
     <div class="autor-texto">
       <p>Valéria Matos é casada há 11 anos, mãe de dois filhos — Enzo, de 8, e Isabela, de 5 — e mora num apartamento de 60m² em São Paulo. Como a maioria das famílias brasileiras, ela sentia o peso da inflação nas compras do mês: uma simples bandeja de morango, alguns limões e um maço de tomate já comprometiam boa parte do orçamento.</p>
-      <p>Tudo mudou quando, em 2021, ela decidiu colocar um vasinho de tomate cereja na janela da cozinha. "Comecei por curiosidade e acabei me apaixonando. Em três semanas eu já estava colhendo." Sem quintal, sem estufa, sem experiência — só um vaso, terra e vontade de mudar.</p>
-      <p>Ao longo dos anos seguintes, Valéria foi refinando um método simples, testado na própria varanda, e começou a compartilhar com amigas e vizinhos que viviam a mesma situação. Os resultados foram tão expressivos que ela decidiu transformar tudo em um guia estruturado — o <strong>Sistema Colheita no Vaso</strong>.</p>
-      <p style="color:var(--g9);font-weight:700">"Qualquer pessoa que tenha uma janela com luz pode fazer isso. Eu provei na minha própria casa — e mais de 2.847 famílias já provaram também."</p>
+      <p>Tudo mudou quando, em 2021, ela decidiu colocar um vasinho de tomate cereja na janela da cozinha. Começou por curiosidade e acabou se apaixonando. Em três semanas já estava colhendo. Sem quintal, sem estufa, sem experiência — só um vaso, terra e vontade de mudar.</p>
+      <p>Ao longo dos anos seguintes, foi refinando um método simples, testado na própria varanda, e começou a compartilhar com amigas e vizinhos. Os resultados foram tão expressivos que decidiu transformar tudo em um guia estruturado — o <strong>Sistema Colheita no Vaso</strong>.</p>
+      <p style="color:var(--g9);font-weight:700">Qualquer pessoa que tenha uma janela com luz pode fazer isso. Eu provei na minha própria casa — e mais de 2.847 famílias já provaram também.</p>
     </div>
   </div>
 </div>
@@ -295,10 +357,7 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 <div class="sec" id="oferta" style="padding-top:48px;padding-bottom:48px">
   <div class="stag" style="text-align:center">Oferta especial de lançamento</div>
   <h2 style="text-align:center;margin-bottom:28px">Tudo isso por apenas <span style="color:var(--am)">R$10</span></h2>
-
   <div class="oferta-nova">
-
-    <!-- HEADER DO CARD -->
     <div class="on-header">
       <div class="on-badge-topo">🔥 ACESSO COMPLETO — OFERTA DE LANÇAMENTO</div>
       <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px">
@@ -310,24 +369,18 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
         <img src="https://github.com/IsoulDemon/novo/blob/main/035e2eb7-5344-4050-8325-1914ae206314-removebg-preview.png?raw=true" alt="Mockup" style="max-width:130px;width:40%;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.35))">
       </div>
     </div>
-
-    <!-- CORPO DO CARD -->
     <div class="on-body">
-
-      <!-- O QUE VOCÊ RECEBE -->
       <p class="on-title-sec">📦 O que você recebe hoje:</p>
       <ul class="on-list">
-        <li><span class="on-check">✓</span><span><strong>Guia completo Sistema Colheita no Vaso</strong> — passo a passo visual do plantio até a primeira colheita, sem enrolação</span></li>
+        <li><span class="on-check">✓</span><span><strong>Guia completo Sistema Colheita no Vaso</strong> — passo a passo visual do plantio até a primeira colheita</span></li>
         <li><span class="on-check">✓</span><span><strong>Guia de variedades para vaso</strong> — quais espécies plantar, onde comprar e como escolher as mudas certas</span></li>
         <li><span class="on-check">✓</span><span><strong>Os erros que matam 90% dos cultivos</strong> — aprenda antes de cometer e não perca nenhuma planta</span></li>
         <li><span class="on-check">✓</span><span><strong>Técnicas de poda simples</strong> — faça a planta produzir mais, por mais tempo</span></li>
-        <li><span class="on-check">✓</span><span><strong>Como cuidar sem gastar quase nada</strong> — adubação e substrato com o que você já tem em casa</span></li>
+        <li><span class="on-check">✓</span><span><strong>Como cuidar sem gastar quase nada</strong> — adubação com o que você já tem em casa</span></li>
         <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 1 — Crescimento rápido natural</strong> — acelere sua produção sem hormônios</span></li>
-        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 2 — Renda extra com o cultivo</strong> — venda o excedente e lucre com sua produção</span></li>
-        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 3 — Cardápio funcional orgânico</strong> — use o que você plantou em receitas saudáveis</span></li>
+        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 2 — Renda extra com o cultivo</strong> — venda o excedente e lucre</span></li>
+        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 3 — Cardápio funcional orgânico</strong> — do vaso direto para a sua mesa</span></li>
       </ul>
-
-      <!-- TIMER -->
       <div class="on-timer-bloco">
         <p style="font-size:13px;font-weight:700;color:var(--g9);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px">⏰ Oferta expira em:</p>
         <div class="timer" style="margin:0 0 8px">
@@ -339,25 +392,19 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
         </div>
         <p style="font-size:12px;color:#c0392b;font-weight:700;margin:0">⚠️ Após esse tempo, o preço volta para R$47</p>
       </div>
-
-      <!-- CTA PRINCIPAL -->
       <a href="https://ggcheckout.app/checkout/v2/ZCGXLOKJrojS20p0Uuqk" class="btn-g" style="font-size:20px;padding:22px 28px;margin-bottom:14px">🌱 QUERO MEU ACESSO POR APENAS R$10</a>
       <div class="on-trust">
         <span>🔒 Pagamento seguro</span>
         <span>⚡ Acesso imediato</span>
         <span>↩️ Garantia de 7 dias</span>
       </div>
-
-      <!-- POR QUE BARATO -->
       <div class="just" style="margin-top:24px">
         <strong>Por que tão barato?</strong>
-        O preço de R$10 não é porque o produto vale pouco. É uma decisão intencional: queremos que qualquer família brasileira tenha acesso a isso, independente da situação financeira. Ao mesmo tempo, esse valor filtra quem realmente quer mudar — e não quem está só curioso sem compromisso.
+        O preço de R$10 não é porque o produto vale pouco. É uma decisão intencional: queremos que qualquer família brasileira tenha acesso a isso, independente da situação financeira. Esse valor filtra quem realmente quer mudar.
       </div>
-
     </div>
   </div>
 </div>
-
 
 <div class="div-line"></div>
 
