@@ -154,6 +154,22 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 .dep-dot{width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;border:none;transition:background .2s;padding:0}
 .dep-dot.active{background:var(--g7)}
 @media(min-width:600px){.dep-track{flex-wrap:wrap;transform:none!important}.dep-slide{min-width:calc(50% - 4px);flex:1}.dep-dots{display:none}}
+/* OFERTA NOVA */
+.oferta-nova{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.15);margin:0 auto;max-width:620px}
+.on-header{background:linear-gradient(135deg,var(--g9) 0%,#145228 100%);color:#fff;padding:28px 24px;text-align:center}
+.on-badge-topo{display:inline-block;background:var(--am);color:var(--mr);font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:4px}
+.on-preco-big{font-family:'Oswald',sans-serif;font-size:72px;font-weight:700;color:#fff;line-height:1}
+.on-preco-big sup{font-size:28px;vertical-align:top;margin-top:14px;display:inline-block}
+.on-body{background:#fff;padding:28px 24px}
+.on-title-sec{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--g9);margin-bottom:14px;border-bottom:2px solid var(--g1);padding-bottom:8px}
+.on-list{list-style:none;margin-bottom:24px}
+.on-list li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:15px;color:var(--txt)}
+.on-list li:last-child{border:none}
+.on-list li.on-bonus{background:#FFFBF0;margin:0 -8px;padding:9px 8px;border-radius:6px;border-bottom:none;margin-top:2px}
+.on-check{min-width:24px;height:24px;background:var(--g5);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:900;flex-shrink:0;margin-top:1px}
+.on-check-gold{background:var(--am);color:var(--mr);font-size:14px}
+.on-timer-bloco{background:var(--g1);border:2px solid var(--g3);border-radius:14px;padding:18px;text-align:center;margin-bottom:22px}
+.on-trust{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut);font-weight:700;margin-bottom:20px;padding:12px;background:#f9f9f9;border-radius:8px}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -168,12 +184,12 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 <div class="pg">
 
 <!-- ALERTA TOPO -->
-<div class="alerta">⚠️ ATENÇÃO — Vagas de lançamento limitadas. Após preencher, o preço sobe para R$97.</div>
+<div class="alerta" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">⚠️ OFERTA EXPIRA EM: <span style="font-family:'Oswald',sans-serif;font-size:17px;letter-spacing:1px;background:rgba(0,0,0,0.25);padding:2px 10px;border-radius:4px"><span id="hh2">07</span>:<span id="mm2">38</span>:<span id="ss2">51</span></span> — após isso o preço sobe para <strong>R$47</strong></div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="badge">Mais de 2.847 alunos já colheram em casa</div>
-  <h1>Uma bandeja de morango no mercado custa mais do que o guia que te ensina a produzir em casa. Por apenas <em>10 reais</em>!</h1>
+  <h1>Pare de gastar mais de <em>250 reais</em> todo mês com frutas e verduras no mercado. Por apenas <em>10 reais</em>, você aprende a plantar e colher seus próprios alimentos frescos todos os dias, para sempre.</h1>
 <p class="sub">Acorde amanhã sabendo que tem frutas crescendo na sua janela. Sem quintal. Sem experiência. Começa hoje.</p>
 </div>
 
@@ -240,34 +256,72 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 <div class="div-line"></div>
 
 <!-- OFERTA -->
-<div class="sec" id="oferta">
-  <div class="stag">Oferta especial de lançamento</div>
-  <h2>Investimento que cabe em qualquer bolso</h2>
+<div class="sec" id="oferta" style="padding-top:48px;padding-bottom:48px">
+  <div class="stag" style="text-align:center">Oferta especial de lançamento</div>
+  <h2 style="text-align:center;margin-bottom:28px">Tudo isso por apenas <span style="color:var(--am)">R$10</span></h2>
 
-  <div class="oferta">
-    <p class="de">De R$ 97,00</p>
-    <img src="https://github.com/IsoulDemon/novo/blob/main/035e2eb7-5344-4050-8325-1914ae206314-removebg-preview.png?raw=true" alt="Mockup do Curso" style="display:block;max-width:320px;width:80%;margin:0 auto 18px;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.18))">
-    <div class="preco"><sup>R$</sup>10</div>
-    <p class="por">pagamento único — acesso vitalício — nunca paga de novo</p>
+  <div class="oferta-nova">
 
-    <div class="just">
-      <strong>Por que tão barato?</strong>
-      O preço de R$10 não é porque o produto vale pouco. É uma decisão intencional: queremos que qualquer família brasileira tenha acesso a isso, independente da situação financeira. Ao mesmo tempo, esse valor filtra quem realmente quer mudar — e não quem está só curioso sem compromisso.
+    <!-- HEADER DO CARD -->
+    <div class="on-header">
+      <div class="on-badge-topo">🔥 ACESSO COMPLETO — OFERTA DE LANÇAMENTO</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px">
+        <div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.6);text-decoration:line-through;margin:0">De R$ 97,00</p>
+          <div class="on-preco-big"><sup>R$</sup>10</div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.75);margin:0">pagamento único · acesso vitalício</p>
+        </div>
+        <img src="https://github.com/IsoulDemon/novo/blob/main/035e2eb7-5344-4050-8325-1914ae206314-removebg-preview.png?raw=true" alt="Mockup" style="max-width:130px;width:40%;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.35))">
+      </div>
     </div>
 
-    <a href="https://ggcheckout.app/checkout/v2/ZCGXLOKJrojS20p0Uuqk" class="btn-g">QUERO MEU KIT AGORA POR APENAS R$10</a>
-    <p style="font-size:13px;opacity:.5;margin-top:14px">🔒 Pagamento seguro &nbsp;·&nbsp; Acesso imediato no e-mail &nbsp;·&nbsp; Garantia de 7 dias</p>
+    <!-- CORPO DO CARD -->
+    <div class="on-body">
 
-    <div class="timer">
-      <div class="tb"><span class="tn" id="hh">07</span><span class="tl">Horas</span></div>
-      <div class="tsep">:</div>
-      <div class="tb"><span class="tn" id="mm">38</span><span class="tl">Minutos</span></div>
-      <div class="tsep">:</div>
-      <div class="tb"><span class="tn" id="ss">51</span><span class="tl">Segundos</span></div>
+      <!-- O QUE VOCÊ RECEBE -->
+      <p class="on-title-sec">📦 O que você recebe hoje:</p>
+      <ul class="on-list">
+        <li><span class="on-check">✓</span><span><strong>Guia completo Sistema Colheita no Vaso</strong> — passo a passo visual do plantio até a primeira colheita, sem enrolação</span></li>
+        <li><span class="on-check">✓</span><span><strong>Guia de variedades para vaso</strong> — quais espécies plantar, onde comprar e como escolher as mudas certas</span></li>
+        <li><span class="on-check">✓</span><span><strong>Os erros que matam 90% dos cultivos</strong> — aprenda antes de cometer e não perca nenhuma planta</span></li>
+        <li><span class="on-check">✓</span><span><strong>Técnicas de poda simples</strong> — faça a planta produzir mais, por mais tempo</span></li>
+        <li><span class="on-check">✓</span><span><strong>Como cuidar sem gastar quase nada</strong> — adubação e substrato com o que você já tem em casa</span></li>
+        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 1 — Crescimento rápido natural</strong> — acelere sua produção sem hormônios</span></li>
+        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 2 — Renda extra com o cultivo</strong> — venda o excedente e lucre com sua produção</span></li>
+        <li class="on-bonus"><span class="on-check on-check-gold">🎁</span><span><strong>Bônus 3 — Cardápio funcional orgânico</strong> — use o que você plantou em receitas saudáveis</span></li>
+      </ul>
+
+      <!-- TIMER -->
+      <div class="on-timer-bloco">
+        <p style="font-size:13px;font-weight:700;color:var(--g9);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px">⏰ Oferta expira em:</p>
+        <div class="timer" style="margin:0 0 8px">
+          <div class="tb"><span class="tn" id="hh">07</span><span class="tl">Horas</span></div>
+          <div class="tsep">:</div>
+          <div class="tb"><span class="tn" id="mm">38</span><span class="tl">Minutos</span></div>
+          <div class="tsep">:</div>
+          <div class="tb"><span class="tn" id="ss">51</span><span class="tl">Segundos</span></div>
+        </div>
+        <p style="font-size:12px;color:#c0392b;font-weight:700;margin:0">⚠️ Após esse tempo, o preço volta para R$47</p>
+      </div>
+
+      <!-- CTA PRINCIPAL -->
+      <a href="https://ggcheckout.app/checkout/v2/ZCGXLOKJrojS20p0Uuqk" class="btn-g" style="font-size:20px;padding:22px 28px;margin-bottom:14px">🌱 QUERO MEU ACESSO POR APENAS R$10</a>
+      <div class="on-trust">
+        <span>🔒 Pagamento seguro</span>
+        <span>⚡ Acesso imediato</span>
+        <span>↩️ Garantia de 7 dias</span>
+      </div>
+
+      <!-- POR QUE BARATO -->
+      <div class="just" style="margin-top:24px">
+        <strong>Por que tão barato?</strong>
+        O preço de R$10 não é porque o produto vale pouco. É uma decisão intencional: queremos que qualquer família brasileira tenha acesso a isso, independente da situação financeira. Ao mesmo tempo, esse valor filtra quem realmente quer mudar — e não quem está só curioso sem compromisso.
+      </div>
+
     </div>
-    <p style="font-size:13px;color:var(--mut);margin-top:8px">⚠️ Após esse tempo, o preço volta para R$97 e as vagas de lançamento podem se esgotar.</p>
   </div>
 </div>
+
 
 <div class="div-line"></div>
 
@@ -330,9 +384,12 @@ body{font-family:'Lato',sans-serif;background:#fff;color:var(--txt);line-height:
 let t = (7*3600)+(38*60)+51;
 function tick(){
   if(t<=0){t=(23*3600)+(59*60)+59}
-  document.getElementById('hh').textContent=String(Math.floor(t/3600)).padStart(2,'0');
-  document.getElementById('mm').textContent=String(Math.floor((t%3600)/60)).padStart(2,'0');
-  document.getElementById('ss').textContent=String(t%60).padStart(2,'0');
+  var h=String(Math.floor(t/3600)).padStart(2,'0');
+  var m=String(Math.floor((t%3600)/60)).padStart(2,'0');
+  var s=String(t%60).padStart(2,'0');
+  ['hh','hh2'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=h;});
+  ['mm','mm2'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=m;});
+  ['ss','ss2'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=s;});
   t--;
 }
 setInterval(tick,1000);
